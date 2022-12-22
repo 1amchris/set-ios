@@ -28,7 +28,7 @@ struct SetGame {
     private(set) var matches: [CardSet]
     
     init() {
-        var generatedDeck = SetGame.generateDeck(shuffled: false)
+        var generatedDeck = SetGame.generateDeck()
 
         displayedCards = (0..<Rules.startingCardsCount).map { _ in generatedDeck.popLast()! }
         deck = generatedDeck
